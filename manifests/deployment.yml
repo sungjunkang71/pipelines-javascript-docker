@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sungjunkangpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sungjunkangpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: sungjunkangpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: sungjunkangpipelinesjavascriptdocker 
+          image: user08acr.azurecr.io/sungjunkangpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
